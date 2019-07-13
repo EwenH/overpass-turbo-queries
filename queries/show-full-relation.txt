@@ -1,0 +1,20 @@
+[out:json][timeout:25];
+(
+  // This query extracts two relationships of a walking trail and a cycling trail in southern Western Australia near Perth. 
+  // There is no bbox used so the relations can be selected whilst not viewing the area. 
+  // The CSS {{style: ... relation {} adds the name of the relation
+}}(adds the name of the relation
+
+rel(8812750); // Kattamorda walking track
+rel(5810814); // Munda Biddi Cycling Track
+);
+
+out body;
+>;
+out skel qt;
+
+{{style:
+  relation {
+    text: name;
+  }
+}}
