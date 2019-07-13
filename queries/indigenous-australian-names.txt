@@ -1,0 +1,39 @@
+  // This query extracts all Australian indigenous names however there are 1300 language codes and this is just an example at the moment
+
+[out:json][timeout:25];
+
+
+(
+
+ // Generic Australian indigenous language
+  node["name:aus"~".*"]({{bbox}});
+  way["name:aus"~".*"]({{bbox}});
+  relation["name:aus"~".*"]({{bbox}});
+  
+  // Wajuk (Beelia; Beeloo; Derbal; Ilakuri wongi; Juadjag; Juadjuk; Karakata; Karrakatta; Minalnjunga; Minnal Yungar; Wadjug; Wadjuk; Wadjup; Wadyuk; Whadjuk; Whajook; Witjaari; Witja:ri; Yooadda; Yooard; Yoongar; Yuard; Yuatjek; Yungar; Yungur)
+  node["name:xwj"~".*"]({{bbox}});
+  way["name:xwj"~".*"]({{bbox}});
+  relation["name:xwj"~".*"]({{bbox}});
+  
+  // Nyungar -extinct (Kaniyang; Kaneang; Nyunga; Kaniyan; aneang;  Kunjung; Kunyung; Ka:lbar-anggara; Jabururu; Yobberore; Uduc-Harvey tribe; Kaleap; Qualeup; Qua-lup; Quailup; Waal.g (nys-kan)) 
+  node["name:nys"~".*"]({{bbox}});
+  way["name:nys"~".*"]({{bbox}});
+  relation["name:nys"~".*"]({{bbox}});
+  
+  // Pitjantjatjara
+  node["name:pjt"~".*"]({{bbox}});
+  way["name:pjt"~".*"]({{bbox}});
+  relation["name:pjt"~".*"]({{bbox}});
+  
+  // Tasmanian
+  node["name:xtz"~".*"]({{bbox}});
+  way["name:xtz"~".*"]({{bbox}});
+  relation["name:xtz"~".*"]({{bbox}}); 
+
+  
+); 
+// print results
+out body;
+>;
+out skel qt;
+  
